@@ -1,0 +1,31 @@
+name: Daily Update
+description: Log your daily plan, progress, and blockers.
+title: "[DATE]: Daily Update - [Name]"
+labels: ["Status: On Track"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Plan for Today
+  - type: checkboxes
+    id: tasks
+    attributes:
+      label: Tasks
+      description: What are you working on today?
+      options:
+        - label: Task 1
+        - label: Task 2
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Blockers / Help Needed
+      description: Are you stuck? Tag your mentor here (e.g., @mentor).
+      placeholder: No blockers.
+  - type: markdown
+    attributes:
+      value: |
+        ### EOD Reflection
+        *At the end of the day, please:*
+        1. Check off the completed tasks above.
+        2. Close this issue.
