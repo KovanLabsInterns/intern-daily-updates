@@ -1,62 +1,99 @@
-# Weekly Update – <Intern Name>
-**Domain:** Java / Python  
-**Project:** <Project Name>  
-**Week:** <Start Date> – <End Date>  
-**Mentor:** <Mentor Name>  
+name: Weekly Intern Update
+description: Weekly status update for interns (Java / Python)
+title: "Weekly Update - <Intern Name> - Week <Number>"
+labels:
+  - weekly-update
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Weekly Update Template
 
----
+        Please fill in all sections below. Update this issue daily.
 
-## 🔹 Week Plan
-(List all issues planned for this week)
+  - type: input
+    id: intern_name
+    attributes:
+      label: Intern Name
+      placeholder: Enter your full name
+    validations:
+      required: true
 
-- [ ] <GitHub Issue Link> – <Short description>
-- [ ] <GitHub Issue Link> – <Short description>
-- [ ] <GitHub Issue Link> – <Short description>
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - Java
+        - Python
+    validations:
+      required: true
 
----
+  - type: input
+    id: project_name
+    attributes:
+      label: Project Name
+      placeholder: Enter project name
+    validations:
+      required: true
 
-## 🔹 Daily Updates
+  - type: textarea
+    id: week_plan
+    attributes:
+      label: Week Plan
+      description: List all GitHub issues planned for this week
+      value: |
+        - [ ] https://github.com/org/repo/issues/123
+        - [ ] https://github.com/org/repo/issues/124
+    validations:
+      required: true
 
-### **<Date>**
-- [ ] <GitHub Issue Link>  
-  - Work done: <what was worked on>
-  - Status: In progress / Completed / Blocked
-  - Notes (optional): <any challenges / discussions / PR info>
+  - type: textarea
+    id: daily_updates
+    attributes:
+      label: Daily Updates
+      description: Update this section daily
+      value: |
+        ### Date: YYYY-MM-DD
+        - [ ] Issue Link
+          - Work done:
+          - Status:
+          - Notes:
+    validations:
+      required: true
 
----
+  - type: textarea
+    id: prs
+    attributes:
+      label: Pull Requests
+      description: Add PR links if any
+      value: |
+        - PR Link:
+          Status:
+    validations:
+      required: false
 
-### **<Date>**
-- [ ] <GitHub Issue Link>  
-  - Work done:
-  - Status:
-  - Notes:
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Blockers / Risks
+      description: Mention blockers if any
+      placeholder: None
+    validations:
+      required: false
 
----
+  - type: textarea
+    id: learnings
+    attributes:
+      label: Learnings This Week
+      placeholder: What did you learn this week?
+    validations:
+      required: false
 
-### **<Date>**
-- [ ] <GitHub Issue Link>  
-  - Work done:
-  - Status:
-  - Notes:
-
----
-
-## 🔹 Pull Requests (if any)
-- PR Link: <GitHub PR URL>  
-  - Description: <what the PR covers>
-  - Status: Open / Merged / Changes Requested
-
----
-
-## 🔹 Blockers / Risks
-- <Any technical, dependency, or access issues>
-
----
-
-## 🔹 Learnings This Week
-- <New concepts, tools, frameworks, or practices learned>
-
----
-
-## 🔹 Plan for Next Week
-- <High-level plan or issues to be picked up next>
+  - type: textarea
+    id: next_week
+    attributes:
+      label: Plan for Next Week
+      placeholder: High-level plan for next week
+    validations:
+      required: false
